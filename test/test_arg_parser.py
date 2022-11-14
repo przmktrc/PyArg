@@ -3,8 +3,8 @@ import sys
 sys.path.append("")
 
 import unittest
-import pyarg
-from pyarg import ArgParser
+import arg_parser
+from arg_parser import ArgParser
 
 
 
@@ -116,7 +116,7 @@ class ArgParserTest(unittest.TestCase):
             nonlocal a
             try:
                 a += int(parser.get_next_arg())
-            except pyarg.NoNextArgument:
+            except arg_parser.NoNextArgument:
                 a = 1000
 
         def inc_b(_1, parser: ArgParser) -> None:
